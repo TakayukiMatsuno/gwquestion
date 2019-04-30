@@ -1,8 +1,5 @@
-
 print("買い物の合計金額を入力してください。")
-cost=input()
+cost = int(input())
 print("支払う金額を入力してください。")
-pay=input()
-change=int(pay)-int(cost)
-print("お釣りは、"+str(change)+"です。")
-
+pay = int(input())
+print("お釣りは、{0}です。".format(pay - cost))

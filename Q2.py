@@ -1,3 +1,3 @@
 print("こんにちは。あなたの名前は何ですか？")
-answer=input()
-print("ようこそ、"+ answer + "さん")
+user_name = input()
+print("ようこそ、{0}さん".format(user_name))
