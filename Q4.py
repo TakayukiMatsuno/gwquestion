@@ -6,7 +6,7 @@ pay = int(input())
 if pay < cost:
     print("金額が足りません。")
 else:
-    change = cost - pay
+    change = pay - cost
     print("お釣りは、{0}円で、".format(change))
     for money in MONEY_KIND_LIST:
         unit = ""

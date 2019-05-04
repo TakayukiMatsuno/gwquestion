@@ -7,7 +7,7 @@ pay = int(input())
 if pay < cost:
     print("金額が足りません。")
 else:
-    change = cost - pay
+    change = pay - cost
     for money in MONEY_KIND_LIST:
         money_count_list.append(change // money)
         change -= change // money * money
