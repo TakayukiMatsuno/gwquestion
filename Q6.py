@@ -30,10 +30,15 @@ while distance > 1:
                 print("---------------------------------")
                 print("プレーヤーの攻撃！")
                 print("4のダメージ")
+                enemy_hp = enemy_hp - 4
+                if enemy_hp <= 0:
+                    print("敵を倒した！")
+                    break
                 print("敵の攻撃！")
                 print("3のダメージ")
-                enemy_hp = enemy_hp - 4
                 player_hp = player_hp - 3
+                if player_hp <= 0:
+                    print("残念！死亡してしまいました！")
             elif choice == "2":
                 escape_result = ["ok", "failure"]
                 away = random.choice(escape_result)
@@ -42,8 +47,6 @@ while distance > 1:
                     break
                 elif away == "failure":
                     print("まわりこまれた！")
-        else:
-            print("敵を倒した！")
     elif happening == cure:
         player_hp = player_hp + 3
     distance = distance - 1
